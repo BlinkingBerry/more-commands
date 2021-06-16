@@ -13,18 +13,7 @@
 
 (function () {
 	'use strict';
-	let modData = cardboard.register('betterInventory');
-
-	modData = {
-		scale: 3,
-		critterScale: .5,
-		sortMethod: "itemId",
-	};
-
-	modData.width = Math.min((855 - 40) - modData.critterScale * 440 * .4886363636363636, 760);
-	modData.height = 400;
-	modData.rows = Math.floor(modData.scale * modData.height / 200);
-	modData.columns = Math.floor(modData.scale * modData.width / 200);
+	cardboard.register('moreCommands');
 
 	cardboard.on('loadScriptWorld', function (t) {
 		t.innerHTML = t.innerHTML.replace(
